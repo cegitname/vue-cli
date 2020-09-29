@@ -1,0 +1,107 @@
+@charset "utf-8";
+/* 禁用iPhone中Safari的字号自动调整 */
+
+html {
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+/* 去除iPhone中默认的input样式 */
+
+input {
+	-webkit-appearance:none;
+	resize: none;
+}
+
+/* 取消链接高亮  */
+
+body, div, ul, li, ol, h1, h2, h3, h4, h5, h6, input, textarea, select, p, dl, dt, dd, a, img, button, form, table, th, tr, td, tbody, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	font-family: "PingFang SC", "Microsoft YaHei","Avenir", Helvetica, Tahoma, Arial, Roboto,sans-serif;
+}
+
+div {
+	word-wrap: break-word;
+	word-break: normal;
+}
+
+/* 设置HTML5元素为块 */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+/* 图片自适应 */
+
+img {
+	/* width: 100%; */
+	max-width: 100%;
+	height: auto;
+	width: auto \9;
+	/* ie8 */
+	-ms-interpolation-mode: bicubic;
+	/*为了照顾ie图片缩放失真*/
+}
+
+/* 清零 */
+
+body, div, ul, li, ol, h1, h2, h3, h4, h5, h6, span, input, textarea, select, p, dl, dt, dd, a, img, button, form, table, th, tr, td, tbody, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+body {
+	font-family: "PingFang SC", "Microsoft YaHei","Avenir", Helvetica, Tahoma, Arial, Roboto,sans-serif;
+	color: #333;
+	font-size: 14px;
+	background: #FFFFFF;
+}
+
+em, i {
+	font-style: normal;
+}
+
+
+a {
+	text-decoration: none;
+	color: #969696;
+	-webkit-tap-highlight-color: transparent;
+	-moz-transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease; 
+	 font-family: "PingFang SC", "Microsoft YaHei","Avenir", Helvetica, Tahoma, Arial, Roboto,sans-serif;
+}
+
+ul, ol, li {
+	list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+	font-family: "PingFang SC", "Microsoft YaHei","Avenir", Helvetica, Tahoma, Arial, Roboto,sans-serif;
+	font-weight: normal;
+}
+
+fieldset, img {
+	border: none;
+}
+
+input,
+button {
+    -webkit-appearance: button;
+    border-style: none;
+	outline: none;
+	margin: 0;
+    padding: 0;
+}
+
+input:focus {
+	outline: none;
+}
+
+
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
