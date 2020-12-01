@@ -1,21 +1,20 @@
 <template>
-  <div class="home">
-  </div>
+  <div></div>
 </template>
-
 <script>
 export default {
-  name: 'Home',
   data() {
     return {
     }
   },
-  components: {
+  watch: {
+  },
+  created() {
   },
   methods: {
-  },
+  }
+
 }
 </script>
-
-<style scope lang='less'>
+<style lang="less" scoped>
 </style>
