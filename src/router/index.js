@@ -2,34 +2,33 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
-const routes = [
+import Layout from '@/layout/index'
+
+export const constantRoutes = [
   {
     path: '/',
-    redirect: '/home'
+    component: Layout,
+    redirect: '/dashboard',
+    children: [
+      {
+        path: 'dashboard',
+        component: () => import('@/views/dashboard/index'),
+        name: 'Dashboard',
+        meta: { title: 'Dashboard'}
+      }
+    ]
   },
   {
-    path: '/home',
-    name: 'Home',
-    component: () => import('@/pages/home/home'),
-    meta: {
-      title: '首页',
-    }
+    path: '/404',
+    component: () => import('@/views/404/404.vue')
   },
-  {
-    path: '*',
-    name: 'err',
-    component: () => import('@/pages/404/404'),
-    meta: {
-      title: '404',
-    }
-  }
 ]
 
 const router = new VueRouter({
+  routes: constantRoutes,
   scrollBehavior: () => ({
     y: 0
   }),
-  routes
 })
 
 router.beforeEach((to, from, next) => {
